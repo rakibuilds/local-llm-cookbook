@@ -1,0 +1,8 @@
+﻿# Shared dependencies for local LLM distillation.
+# Install the appropriate PyTorch build before installing this file.
+
+transformers
+peft
+accelerate
+safetensors
+PyYAML

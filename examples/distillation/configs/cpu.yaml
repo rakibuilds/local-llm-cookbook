@@ -1,0 +1,41 @@
+﻿# CPU training configuration
+# Intended for small experimental models and CPU-only systems.
+
+model_name: "HuggingFaceTB/SmolLM2-360M-Instruct"
+
+dataset:
+  train_file: "examples/distillation/data/train-v3.jsonl"
+  validation_file: "examples/distillation/data/validation-v3.jsonl"
+  test_file: "examples/distillation/data/test-v3.jsonl"
+
+output:
+  directory: "examples/distillation/outputs/cpu-smollm2-360m-v2"
+
+training:
+  seed: 42
+  num_train_epochs: 1
+  max_seq_length: 768
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 1
+  gradient_accumulation_steps: 4
+  learning_rate: 0.0002
+  weight_decay: 0.01
+  warmup_ratio: 0.03
+  logging_steps: 1
+  save_strategy: "epoch"
+  eval_strategy: "epoch"
+  save_total_limit: 2
+  fp16: false
+  bf16: false
+  gradient_checkpointing: false
+  dataloader_num_workers: 0
+
+lora:
+  enabled: true
+  rank: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+    - "q_proj"
+    - "v_proj"
+

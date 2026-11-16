@@ -1,0 +1,5 @@
+
+{"id":"prompt-001","task":"explanation","prompt":"Explain what a local language model is in simple terms."}
+{"id":"prompt-002","task":"explanation","prompt":"Explain model quantization and why it is useful."}
+{"id":"prompt-003","task":"coding","prompt":"Write a Python function that checks whether a number is prime. Include a short explanation."}
+{"id":"prompt-004","task":"summarization","prompt":"Summarize three benefits of running language models locally."}

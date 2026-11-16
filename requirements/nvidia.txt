@@ -1,0 +1,6 @@
+﻿# NVIDIA environment.
+# Install a CUDA-compatible PyTorch build first, then install this file.
+-r common.txt
+
+# Optional QLoRA dependencies are intentionally not included here.
+# Their installation depends on OS, CUDA and package compatibility.

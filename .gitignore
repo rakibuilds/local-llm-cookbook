@@ -1,0 +1,81 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Type checking and linting
+.mypy_cache/
+.pyright/
+.ruff_cache/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+!.env.template
+secrets/
+*.pem
+*.key
+
+# Local model and training artifacts
+# Training outputs and checkpoints
+examples/distillation/outputs/
+outputs/
+checkpoints/
+runs/
+wandb/
+mlruns/
+lightning_logs/
+
+# Model weights and binary artifacts
+*.safetensors
+*.gguf
+*.ggml
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Temporary test data
+examples/distillation/data/empty-test.jsonl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Operating systems
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/

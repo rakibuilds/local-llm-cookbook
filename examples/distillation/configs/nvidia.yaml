@@ -1,0 +1,41 @@
+﻿# NVIDIA GPU training configuration
+# Requires a compatible CUDA-enabled PyTorch installation.
+
+model_name: "HuggingFaceTB/SmolLM2-1.7B-Instruct"
+
+dataset:
+  train_file: "examples/distillation/data/train-v3.jsonl"
+  validation_file: "examples/distillation/data/validation-v3.jsonl"
+  test_file: "examples/distillation/data/test-v3.jsonl"
+
+output:
+  directory: "examples/distillation/outputs/nvidia-smollm2-1.7b"
+
+training:
+  seed: 42
+  num_train_epochs: 3
+  max_seq_length: 1024
+  per_device_train_batch_size: 1
+  per_device_eval_batch_size: 1
+  gradient_accumulation_steps: 8
+  learning_rate: 0.0002
+  weight_decay: 0.01
+  warmup_ratio: 0.03
+  logging_steps: 10
+  save_strategy: "epoch"
+  eval_strategy: "epoch"
+  save_total_limit: 2
+  fp16: true
+  bf16: false
+  gradient_checkpointing: true
+  dataloader_num_workers: 0
+
+lora:
+  enabled: true
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+    - "q_proj"
+    - "v_proj"
+

@@ -1,0 +1,5 @@
+
+{"id":"prompt-001","task":"explanation","prompt":"Explain what a locally running Large Language Model (LLM) is. Clarify that 'local' refers to where the model runs (on a user's own computer or server), not necessarily the language or geographic region it was trained for. Give a simple example."}
+{"id":"prompt-002","task":"explanation","prompt":"Explain LLM weight quantization accurately. Describe FP16, INT8, and 4-bit quantization, explain the memory benefits and potential quality trade-offs, and distinguish post-training quantization from quantization-aware training. Avoid claiming that all quantization requires retraining."}
+{"id":"prompt-003","task":"coding","prompt":"Write a correct Python function that checks whether an integer is prime. Handle negative integers, zero, one, and small prime numbers. Include the implementation, examples, and a short explanation."}
+{"id":"prompt-004","task":"summarization","prompt":"Summarize three practical benefits and two limitations of running an LLM locally. Discuss privacy, internet independence, hardware requirements, and model performance. Avoid absolute guarantees."}
